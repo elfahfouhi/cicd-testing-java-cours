@@ -96,21 +96,21 @@ def sendEmail(recipients) {
 }
 
 String getEnvName(String branchName) {
-    if (branchName == 'master') {
+    if (branchName == 'main') {
         return 'prod'
     }
     return (branchName == 'develop') ? 'uat' : 'dev'
 }
 
 String getHTTPPort(String branchName) {
-    if (branchName == 'master') {
+    if (branchName == 'main') {
         return '9003'
     }
     return (branchName == 'develop') ? '9002' : '9001'
 }
 
 String getTag(String buildNumber, String branchName) {
-    if (branchName == 'master') {
+    if (branchName == 'main') {
         return buildNumber + '-unstable'
     }
     return buildNumber + '-stable'
