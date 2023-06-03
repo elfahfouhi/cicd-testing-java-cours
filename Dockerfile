@@ -1,6 +1,6 @@
 FROM adoptopenjdk/openjdk11:alpine-jre
 
-ARG JAR_FILE=target/calculator.jar
+ARG JAR_FILE=calculator.jar
 
 WORKDIR /opt/app
 
